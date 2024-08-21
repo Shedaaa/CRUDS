@@ -51,6 +51,21 @@ input:focus {
 #total::before {
   content: "Total: ";
 }
+@media (max-width: 767px) {
+  .project .inputs .price {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    justify-content: center;
+  }
+  .project .inputs .price input {
+    width: 44%;
+    margin-right: unset;
+  }
+  #total {
+    padding: 5px 10px;
+  }
+}
 button {
   width: 101%;
   height: 30px;
@@ -78,10 +93,21 @@ button:hover {
 .project .outputs .searchBtn button {
   width: 45%;
 }
-.project .outputs table {
+
+/* table */
+
+.project .outputs .table table {
   width: 100%;
   text-align: center;
   margin: 10px 0;
+}
+@media (max-width: 1199px) {
+  .project .outputs .table {
+    overflow-x: auto;
+  }
+  .project .outputs .table table {
+    min-width: 959px;
+  }
 }
 th,
 td {
